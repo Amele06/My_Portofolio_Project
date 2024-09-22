@@ -25,4 +25,8 @@ const connectDB = require('./config/db');
 //   app.listen(PORT, () => {
 //     console.log(`Server running on port ${PORT}`);
 //     });
-//
+/const userRoutes = require('./routes/userRoutes');
+
+// Use the user routes
+// app.use('/api/users', userRoutes);
+// /
