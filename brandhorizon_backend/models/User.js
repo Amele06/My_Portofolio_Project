@@ -1,7 +1,6 @@
-// models/User.js
-// const mongoose = require('mongoose');
-//
-// // Create a schema for the User
+const mongoose = require('mongoose');
+
+// Create a schema for the User
 // const userSchema = mongoose.Schema(
 //   {
 //       name: {
