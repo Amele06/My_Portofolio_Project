@@ -1,6 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const userRoutes = require('./routes/userRoutes'); // Importing user routes
 
 // Load environment variables
 // dotenv.config();
@@ -18,6 +19,9 @@ const connectDB = require('./config/db');
 //   res.send('API is running...');
 //   });
 //
+//   // Use the user routes
+//   app.use('/api/users', userRoutes);
+//
 //   // Define the port to run the server
 //   const PORT = process.env.PORT || 5000;
 //
@@ -25,8 +29,4 @@ const connectDB = require('./config/db');
 //   app.listen(PORT, () => {
 //     console.log(`Server running on port ${PORT}`);
 //     });
-/const userRoutes = require('./routes/userRoutes');
-
-// Use the user routes
-// app.use('/api/users', userRoutes);
-// /
+//
