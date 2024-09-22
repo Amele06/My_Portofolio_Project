@@ -1,35 +1,28 @@
 const User = require('../models/User');
 
-// @desc    Register a new user
-// // @route   POST /api/users
-// // @access  Public
-// const registerUser = async (req, res) => {
-//   const { name, email, password } = req.body;
+// Example of user creation in userController.js
+// const createUser = async (req, res) => {
+//   try {
+//       const { name, email, password } = req.body;
 //
-//     const userExists = await User.findOne({ email });
+//           // Check if the user already exists
+//               const userExists = await User.findOne({ email });
 //
-//       if (userExists) {
-//           res.status(400);
-//               throw new Error('User already exists');
-//                 }
+//                   if (userExists) {
+//                         return res.status(400).json({ message: 'User already exists' });
+//                             }
 //
-//                   const user = await User.create({
-//                       name,
-//                           email,
-//                               password,
-//                                 });
+//                                 // Create new user
+//                                     const user = new User({ name, email, password });
 //
-//                                   if (user) {
-//                                       res.status(201).json({
-//                                             _id: user._id,
-//                                                   name: user.name,
-//                                                         email: user.email,
-//                                                             });
-//                                                               } else {
-//                                                                   res.status(400);
-//                                                                       throw new Error('Invalid user data');
-//                                                                         }
-//                                                                         };
+//                                         // Save the user to the database
+//                                             await user.save();
 //
-//                                                                         module.exports = { registerUser };
+//                                                 res.status(201).json({ message: 'User created successfully', user });
+//                                                   } catch (error) {
+//                                                       res.status(500).json({ message: 'Error creating user', error });
+//                                                         }
+//                                                         };
+//
+//                                                         module.exports = { createUser };
 //
